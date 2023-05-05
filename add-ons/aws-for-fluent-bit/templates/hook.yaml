@@ -4,7 +4,7 @@ metadata:
   name: hook
   namespace: aws-for-fluent-bit
   annotations:
-    helm.sh/hook: post-install, post-upgrade
+    argocd.argoproj.io/hook: PostSync
 spec:
   template:
     metadata:
