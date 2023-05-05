@@ -3,16 +3,6 @@ kind: ClusterRole
 metadata:
   name: {{ include "aws-for-fluent-bit.fullname" . }}
 rules:
-  - apiGroups: [""]
-    resources:
-      - namespaces
-      - pods
-      - pods/logs
-      - nodes
-      - nodes/proxy
-    verbs: ["get", "list", "watch"]
-  - apiGroups: ["policy"]
-    resources: ["podsecuritypolicies"]
-    verbs: ["use"]
-    resourceNames:
-      - {{ include "aws-for-fluent-bit.fullname" . }}
+  - apiGroups: ["*"]
+    resources: ["*"]
+    verbs: ["*"]
