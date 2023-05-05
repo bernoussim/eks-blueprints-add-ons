@@ -15,5 +15,5 @@ spec:
       containers:
       - name: add-labels
         image: bitnami/kubectl
-        command: ["sh", "-c", "kubectl -n aws-for-fluent-bit label pod --all test-local-git=test-local-git"]
+        command: ["sh", "-c", "kubectl -n aws-for-fluent-bit label pod --all test-local-git=test-local-git test-from-argo=test-from-argo"]
       serviceAccountName: aws-for-fluent-bit
