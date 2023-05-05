@@ -2,7 +2,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: hook
-  namespace: team-riker
+  namespace: aws-for-fluent-bit
   annotations:
     helm.sh/hook: post-install, post-upgrade
 spec:
@@ -15,4 +15,4 @@ spec:
       containers:
       - name: add-labels
         image: bitnami/kubectl
-        command: ["sh", "-c", "kubectl -n team-riker label deployment --all test-local-git=test-local-git"]
+        command: ["sh", "-c", "kubectl -n aws-for-fluent-bit label deployment --all test-local-git=test-local-git"]
