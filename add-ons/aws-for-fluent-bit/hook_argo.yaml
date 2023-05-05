@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  generateName: add-labels
+  generateName: add-labels-
   namespace: aws-for-fluent-bit
   annotations:
     argocd.argoproj.io/hook: PostSync
