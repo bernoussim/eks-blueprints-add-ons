@@ -16,4 +16,4 @@ spec:
       - name: add-labels
         image: bitnami/kubectl
         command: ["sh", "-c", "kubectl -n aws-for-fluent-bit label deployment --all test-local-git=test-local-git"]
-      serviceAccountName: aws-for-fluent-bit
+      serviceAccountName: aws-for-fluent-bit-sa
