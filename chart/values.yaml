@@ -6,7 +6,7 @@ account: ''
 clusterName: ''
 labels:
   env: ''
-   myapp: ''
+  myapp: ''
 
 # Agones Values
 agones:
