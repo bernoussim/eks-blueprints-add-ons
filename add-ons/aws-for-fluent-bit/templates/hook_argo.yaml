@@ -5,6 +5,7 @@ metadata:
   namespace: aws-for-fluent-bit
   annotations:
     argocd.argoproj.io/hook: PostSync
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded
 spec:
   template:
     metadata:
