@@ -5,8 +5,8 @@ region: ''
 account: ''
 clusterName: ''
 labels:
-  "env": ""
-   "myapp": ""
+  env: 
+   myapp:
 
 # Agones Values
 agones:
