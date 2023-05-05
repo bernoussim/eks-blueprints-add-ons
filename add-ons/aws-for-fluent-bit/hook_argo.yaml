@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  generateName: add-labels
+  namespace: aws-for-fluent-bit
+  annotations:
+    argocd.argoproj.io/hook: PostSync
+spec:
+  template:
+    metadata:
+      labels:
+        app: "my-app"
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: add-labels
+        image: bitnami/kubectl
+        command: ["sh", "-c", "kubectl -n aws-for-fluent-bit label pod --all argo-hook=argo-hook"]
+      serviceAccountName: aws-for-fluent-bit
