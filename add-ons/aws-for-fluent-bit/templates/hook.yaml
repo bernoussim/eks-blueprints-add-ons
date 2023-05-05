@@ -1,0 +1,18 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: hook
+  namespace: team-riker
+  annotations:
+    helm.sh/hook: post-install, post-upgrade
+spec:
+  template:
+    metadata:
+      labels:
+        app: "my-app"
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: add-labels
+        image: bitnami/kubectl
+        command: ["sh", "-c", "kubectl -n team-riker label deployment --all test-local-git=test-local-git"]
