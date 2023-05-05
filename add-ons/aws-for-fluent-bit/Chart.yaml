@@ -1,20 +1,20 @@
-apiVersion: v2
+apiVersion: v1
 name: aws-for-fluent-bit
-description: A Helm chart for installing AWS for Fluent Bit
-
-# Application charts are a collection of templates that can be packaged into versioned archives
-# to be deployed.
-type: application
-
-# The chart version. This version number should be incremented each time you make changes
-# to the chart and its templates, including the app version.
-version: 0.1.0
-
-# Version number of the application being deployed. This version number should be
-# incremented each time you make changes to the application.
-appVersion: "1.0"
-
-dependencies:
-- name: aws-for-fluent-bit
-  version: 0.1.17
-  repository: https://aws.github.io/eks-charts
+description: A Helm chart to deploy aws-for-fluent-bit project
+version: 0.1.24
+appVersion: 2.28.4
+home: https://github.com/aws/eks-charts
+icon: https://raw.githubusercontent.com/aws/eks-charts/master/docs/logo/aws.png
+sources:
+  - https://github.com/aws/eks-charts
+maintainers:
+  - name: Mohammad Forutan
+    url: https://github.com/mforutan
+    email: mforutan@users.noreply.github.com
+keywords:
+  - eks
+  - fluentbit
+  - fluent-bit
+  - cloudwatch
+  - firehose
+  - kinesis
